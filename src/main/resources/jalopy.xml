@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jalopy vendor="triemax" version="44">
- <profile name="google">
+ <profile name="Hubrick">
   <aliases>
    <alias>.*</alias>
   </aliases>
@@ -1029,9 +1029,9 @@
     <level>0</level>
    </backup>
    <convention>
-    <description>Google Java Style</description>
+    <description>Hubrick Java Style</description>
     <local/>
-    <name>google</name>
+    <name>Hubrick</name>
    </convention>
    <exclusions/>
    <fileTypes><![CDATA[java
