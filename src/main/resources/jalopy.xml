@@ -474,7 +474,7 @@
       </text>
      </separator>
      <wrap>
-      <lineLength>120</lineLength>
+      <lineLength>110</lineLength>
       <minSpace>20</minSpace>
       <multiLine>true</multiLine>
       <singleLine>true</singleLine>
