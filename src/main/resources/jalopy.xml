@@ -111,7 +111,7 @@
    <printer>
     <alignment>
      <arrayInit>false</arrayInit>
-     <methodCallChain>true</methodCallChain>
+     <methodCallChain>false</methodCallChain>
      <nestedMethodCallChain>true</nestedMethodCallChain>
      <parameterMethodDeclaration>false</parameterMethodDeclaration>
      <ternaryOperator>true</ternaryOperator>
