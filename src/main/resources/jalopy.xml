@@ -90,29 +90,29 @@
     </tips>
    </inspector>
    <logging>
-    <enable>true</enable>
+    <enable>false</enable>
     <file>run.log</file>
     <type>log</type>
    </logging>
    <messages>
-    <autoShow>true</autoShow>
+    <autoShow>false</autoShow>
     <priority>
-     <general>40000</general>
-     <inspector>40000</inspector>
-     <parser>40000</parser>
-     <parserJavadoc>40000</parserJavadoc>
-     <printer>40000</printer>
-     <printerJavadoc>40000</printerJavadoc>
-     <progress>40000</progress>
-     <transform>40000</transform>
+     <general>30000</general>
+     <inspector>30000</inspector>
+     <parser>30000</parser>
+     <parserJavadoc>30000</parserJavadoc>
+     <printer>30000</printer>
+     <printerJavadoc>30000</printerJavadoc>
+     <progress>30000</progress>
+     <transform>30000</transform>
     </priority>
-    <showStackTrace>true</showStackTrace>
+    <showStackTrace>false</showStackTrace>
    </messages>
    <printer>
     <alignment>
      <arrayInit>false</arrayInit>
      <methodCallChain>false</methodCallChain>
-     <nestedMethodCallChain>true</nestedMethodCallChain>
+     <nestedMethodCallChain>false</nestedMethodCallChain>
      <parameterMethodDeclaration>false</parameterMethodDeclaration>
      <ternaryOperator>true</ternaryOperator>
      <variableAssignment>false</variableAssignment>
@@ -127,7 +127,7 @@
      <after>
       <annotation>1</annotation>
       <assign>0</assign>
-      <block>0</block>
+      <block>1</block>
       <braceLeft>0</braceLeft>
       <braceLeftClass>0</braceLeftClass>
       <braceLeftMethod>0</braceLeftMethod>
@@ -150,15 +150,15 @@
       <annotation>0</annotation>
       <block>0</block>
       <braceRight>0</braceRight>
-      <caseBlock>0</caseBlock>
+      <caseBlock>1</caseBlock>
       <class>0</class>
       <comment>
        <javadoc>1</javadoc>
-       <multiline>0</multiline>
+       <multiline>1</multiline>
        <separator>1</separator>
-       <singleline>0</singleline>
+       <singleline>1</singleline>
       </comment>
-      <controlStatement>0</controlStatement>
+      <controlStatement>1</controlStatement>
       <declaration>1</declaration>
       <enum>0</enum>
       <footer>1</footer>
@@ -168,9 +168,9 @@
       <section>1</section>
       <sqlj>1</sqlj>
      </before>
-     <headerKeepUpTo>2</headerKeepUpTo>
-     <ignoreSwitchBlock>false</ignoreSwitchBlock>
-     <ignoreSwitchBreak>false</ignoreSwitchBreak>
+     <headerKeepUpTo>1</headerKeepUpTo>
+     <ignoreSwitchBlock>true</ignoreSwitchBlock>
+     <ignoreSwitchBreak>true</ignoreSwitchBreak>
      <keepUpTo>2</keepUpTo>
     </blanklines>
     <braces>
@@ -210,7 +210,7 @@
       <while>false</while>
      </comment>
      <compact>
-      <arrayInit>false</arrayInit>
+      <arrayInit>true</arrayInit>
       <ctor>false</ctor>
       <else>false</else>
       <elseIf>false</elseIf>
@@ -223,9 +223,9 @@
       <throwAndReturn>false</throwAndReturn>
      </compact>
      <empty>
-      <cuddle>true</cuddle>
+      <cuddle>false</cuddle>
       <insertStatement>false</insertStatement>
-      <obeyBraceStyle>false</obeyBraceStyle>
+      <obeyBraceStyle>true</obeyBraceStyle>
       <obeyBraceStyleArray>true</obeyBraceStyleArray>
      </empty>
      <enum>
@@ -240,13 +240,13 @@
       <lineBreakLeft>false</lineBreakLeft>
      </initializer>
      <insert>
-      <doWhile>true</doWhile>
-      <for>true</for>
-      <ifElse>true</ifElse>
-      <singleIf>true</singleIf>
+      <doWhile>false</doWhile>
+      <for>false</for>
+      <ifElse>false</ifElse>
+      <singleIf>false</singleIf>
       <singleLine>false</singleLine>
-      <switch>true</switch>
-      <while>true</while>
+      <switch>false</switch>
+      <while>false</while>
      </insert>
      <lambda>
       <indentSizeBeforeLeft>1</indentSizeBeforeLeft>
@@ -288,11 +288,11 @@
     <comments>
      <format>
       <multiLine>false</multiLine>
-      <singleLine>true</singleLine>
+      <singleLine>false</singleLine>
      </format>
      <javadoc>
       <blankLines>
-       <xdoclet>1</xdoclet>
+       <xdoclet>-1</xdoclet>
       </blankLines>
       <blockTagsShort>false</blockTagsShort>
       <check>
@@ -324,17 +324,17 @@
       </compact>
       <enumShort>false</enumShort>
       <failOnError>false</failOnError>
-      <fieldsShort>false</fieldsShort>
+      <fieldsShort>true</fieldsShort>
       <generate>
        <bean>true</bean>
-       <class>5</class>
-       <constructor>5</constructor>
+       <class>0</class>
+       <constructor>0</constructor>
        <enabled>false</enabled>
        <excludeOverride>false</excludeOverride>
-       <exclusions>@Test</exclusions>
+       <exclusions/>
        <field>0</field>
        <formatBeanProperty>true</formatBeanProperty>
-       <method>5</method>
+       <method>0</method>
        <seeTag>false</seeTag>
        <useExisting>false</useExisting>
       </generate>
@@ -344,8 +344,8 @@
       </html>
       <methodsShort>false</methodsShort>
       <normalizeWhitespace>true</normalizeWhitespace>
-      <parseComments>true</parseComments>
-      <removePreformattedStar>false</removePreformattedStar>
+      <parseComments>false</parseComments>
+      <removePreformattedStar>true</removePreformattedStar>
       <tags>
        <align>true</align>
        <alignAttributes>false</alignAttributes>
@@ -368,45 +368,54 @@
       </tags>
       <templates>
        <class><![CDATA[/**
- * TODO
+ * DOCUMENT ME!
+ *
+ * @author $author$
+ * @version $Revision$, $Date$
  */]]></class>
        <constructor>
         <bottom><![CDATA[ */]]></bottom>
-        <exception><![CDATA[ * @throws $exception.type$ TODO]]></exception>
-        <param><![CDATA[ * @param $param.name$ TODO]]></param>
+        <exception><![CDATA[ * @throws $exception.type$ DOCUMENT ME!]]></exception>
+        <param><![CDATA[ * @param $param.name$ DOCUMENT ME!]]></param>
         <top><![CDATA[/**
  * Creates a new $class.name$ object.]]></top>
        </constructor>
        <enum><![CDATA[/**
- * TODO
+ * DOCUMENT ME!
+ *
+ * @author $author$
+ * @version $Revision$, $Date$
  */]]></enum>
        <getter>
         <bottom><![CDATA[ */]]></bottom>
-        <exception><![CDATA[ * @throws $exception.type$ TODO]]></exception>
-        <param><![CDATA[ * @param $param.name$ the $property.name$.]]></param>
-        <return><![CDATA[ * @return the $property.name$ property.]]></return>
+        <exception><![CDATA[ * @throws $exception.type$ DOCUMENT ME!]]></exception>
+        <param><![CDATA[ * @param $param.name$ DOCUMENT ME!]]></param>
+        <return><![CDATA[ * @return DOCUMENT ME!]]></return>
         <top><![CDATA[/**
- * Returns the $property.name$ property.]]></top>
+ * DOCUMENT ME!]]></top>
        </getter>
        <interface><![CDATA[/**
- * TODO
+ * DOCUMENT ME!
+ *
+ * @author $author$
+ * @version $Revision$, $Date$
  */]]></interface>
        <method>
         <bottom><![CDATA[ */]]></bottom>
-        <exception><![CDATA[ * @throws $exception.type$ TODO]]></exception>
-        <param><![CDATA[ * @param $param.name$ TODO]]></param>
-        <return><![CDATA[ * @return TODO]]></return>
+        <exception><![CDATA[ * @throws $exception.type$ DOCUMENT ME!]]></exception>
+        <param><![CDATA[ * @param $param.name$ DOCUMENT ME!]]></param>
+        <return><![CDATA[ * @return DOCUMENT ME!]]></return>
         <top><![CDATA[/**
- * TODO]]></top>
+ * DOCUMENT ME!]]></top>
        </method>
        <setter>
         <bottom><![CDATA[ */]]></bottom>
-        <exception><![CDATA[ * @throws $exception.type$ TODO]]></exception>
-        <param><![CDATA[ * @param $param.name$ the $param.name$.]]></param>
+        <exception><![CDATA[ * @throws $exception.type$ DOCUMENT ME!]]></exception>
+        <param><![CDATA[ * @param $param.name$ DOCUMENT ME!]]></param>
         <top><![CDATA[/**
- * Sets the $property.name$ property.]]></top>
+ * DOCUMENT ME!]]></top>
        </setter>
-       <variable>/** TODO */</variable>
+       <variable>/** DOCUMENT ME! */</variable>
       </templates>
       <transform>false</transform>
       <wrap>
@@ -419,16 +428,16 @@
          <method>true</method>
         </delim>
        </after>
-       <inline>false</inline>
+       <inline>true</inline>
        <keepNewline>false</keepNewline>
        <lineLength>120</lineLength>
       </wrap>
      </javadoc>
-     <keepFirstColumnAsIs>true</keepFirstColumnAsIs>
+     <keepFirstColumnAsIs>false</keepFirstColumnAsIs>
      <moveAfterBrace>-1</moveAfterBrace>
      <reflow>
-      <multiLine>true</multiLine>
-      <singeLine>true</singeLine>
+      <multiLine>false</multiLine>
+      <singeLine>false</singeLine>
      </reflow>
      <remove>
       <javadoc>
@@ -454,7 +463,7 @@
       <insertMethodRecursive>false</insertMethodRecursive>
       <insertMethods>false</insertMethods>
       <insertRecursive>false</insertRecursive>
-      <length>80</length>
+      <length>120</length>
       <methodTemplate>//~ ${fill.character}*</methodTemplate>
       <staticMethodTemplate>//~ ${fill.character}*</staticMethodTemplate>
       <template>//~ ${description} ${fill.character}*</template>
@@ -476,8 +485,8 @@
      <wrap>
       <lineLength>120</lineLength>
       <minSpace>20</minSpace>
-      <multiLine>true</multiLine>
-      <singleLine>true</singleLine>
+      <multiLine>false</multiLine>
+      <singleLine>false</singleLine>
      </wrap>
     </comments>
     <environment/>
@@ -500,42 +509,42 @@
     <imports>
      <classRepositoryDirectory>repository</classRepositoryDirectory>
      <grouping>
-      <defaultDepth>1</defaultDepth>
-      <packages>google:1|*:1|java:1|javax:1</packages>
-      <static>top</static>
+      <defaultDepth>3</defaultDepth>
+      <packages>*:0|gnu:2|java:2|javax:2</packages>
+      <static>none</static>
      </grouping>
-     <policy>expand</policy>
+     <policy>disabled</policy>
      <sort>true</sort>
      <useCustomImplementation>false</useCustomImplementation>
     </imports>
     <indentation>
      <align>
-      <anonInnerClass>true</anonInnerClass>
-      <arrayInitializers>true</arrayInitializers>
+      <anonInnerClass>false</anonInnerClass>
+      <arrayInitializers>false</arrayInitializers>
       <assert>false</assert>
-      <endlineComment>true</endlineComment>
+      <endlineComment>false</endlineComment>
       <enumConstant>false</enumConstant>
       <lambda>true</lambda>
-      <parenthesesRight>true</parenthesesRight>
+      <parenthesesRight>false</parenthesesRight>
      </align>
-     <arrayInit>mixedEndline</arrayInit>
+     <arrayInit>standard</arrayInit>
      <blockBody>true</blockBody>
-     <callArgs>mixedEndline</callArgs>
+     <callArgs>standard</callArgs>
      <caseBody>true</caseBody>
-     <caseFromSwitch>true</caseFromSwitch>
+     <caseFromSwitch>false</caseFromSwitch>
      <classBody>true</classBody>
      <continuation>
       <block>true</block>
       <operator>true</operator>
-      <parameter>true</parameter>
+      <parameter>false</parameter>
       <return>true</return>
      </continuation>
      <declParams>mixedEndline</declParams>
      <dottedExpr>true</dottedExpr>
      <firstColumnComments>false</firstColumnComments>
      <general>standard</general>
-     <increaseHotSpots>false</increaseHotSpots>
-     <label>true</label>
+     <increaseHotSpots>true</increaseHotSpots>
+     <label>false</label>
      <methodBody>true</methodBody>
      <sizes>
       <bigGapIndent>8</bigGapIndent>
@@ -549,14 +558,14 @@
       <general>4</general>
       <implements>-1</implements>
       <leading>0</leading>
-      <tabs>4</tabs>
+      <tabs>2</tabs>
       <throws>-1</throws>
       <trailingComment>1</trailingComment>
      </sizes>
      <tabs>
-      <comments>true</comments>
-      <enable>true</enable>
-      <onlyLeading>true</onlyLeading>
+      <comments>false</comments>
+      <enable>false</enable>
+      <onlyLeading>false</onlyLeading>
      </tabs>
      <ternaryOperand>true</ternaryOperand>
     </indentation>
@@ -566,9 +575,9 @@
      <callTree>false</callTree>
      <insertExpressionParentheses>true</insertExpressionParentheses>
      <insertImplicitConstructor>false</insertImplicitConstructor>
-     <insertLoggingConditional>true</insertLoggingConditional>
-     <insertOverride>true</insertOverride>
-     <insertParameterFinal>true</insertParameterFinal>
+     <insertLoggingConditional>false</insertLoggingConditional>
+     <insertOverride>false</insertOverride>
+     <insertParameterFinal>false</insertParameterFinal>
      <insertParen>
       <return>false</return>
       <throw>false</throw>
@@ -579,8 +588,8 @@
       <addDefault>false</addDefault>
      </insertSerialID>
      <insertTrailingNewline>true</insertTrailingNewline>
-     <insertUID>true</insertUID>
-     <insertVariableFinal>true</insertVariableFinal>
+     <insertUID>false</insertUID>
+     <insertVariableFinal>false</insertVariableFinal>
      <javadocOnly>false</javadocOnly>
      <keepSameLine>
       <else>false</else>
@@ -593,7 +602,7 @@
      <removeQualifier>false</removeQualifier>
      <removeRedundantModifier>false</removeRedundantModifier>
      <requireBeanPropertyField>false</requireBeanPropertyField>
-     <splitMultiVariables>true</splitMultiVariables>
+     <splitMultiVariables>false</splitMultiVariables>
      <thisQualifier>DISABLED</thisQualifier>
     </misc>
     <searchAndReplace>
@@ -678,9 +687,9 @@
       <order>staticField|staticInit|enum|enumConstant|field|initializer|constructor|staticMethod|method|interface|class|annotation</order>
      </declaration>
      <modifier>
-      <annotation>true</annotation>
+      <annotation>false</annotation>
       <enable>true</enable>
-      <order>annotation|public|protected|private|abstract|static|final|transient|volatile|synchronized|native|strictfp</order>
+      <order>annotation|public|protected|private|abstract|static|final|synchronized|transient|volatile|native|strictfp</order>
      </modifier>
     </sorting>
     <whitespace>
@@ -928,9 +937,9 @@
     </whitespace>
     <wrapping>
      <after>
-      <annotationMember>always</annotationMember>
+      <annotationMember>whenNecessary</annotationMember>
       <leftParenthesis>
-       <annotation>whenExceed</annotation>
+       <annotation>never</annotation>
       </leftParenthesis>
      </after>
      <always>
@@ -946,35 +955,36 @@
      <becauseComments>false</becauseComments>
      <before>
       <rightParenthesis>
-       <annotation>whenExceed</annotation>
+       <annotation>never</annotation>
       </rightParenthesis>
      </before>
-     <callArgument>allWhenExceed</callArgument>
-     <chainedCall>whenNecessary</chainedCall>
+     <callArgument>whenNecessary</callArgument>
+     <chainedCall>allWhenExceed</chainedCall>
      <declarationKeyword>
       <after>never</after>
       <before>never</before>
      </declarationKeyword>
-     <enumConstant>whenNecessary</enumConstant>
-     <expression>never</expression>
+     <enumConstant>never</enumConstant>
+     <expression>whenNecessary</expression>
      <extends>whenNecessary</extends>
      <extendsTypes>whenNecessary</extendsTypes>
      <fieldMarkerAnnotation>always</fieldMarkerAnnotation>
      <fieldName>never</fieldName>
      <general>
-      <avoidBareLeftParen>true</avoidBareLeftParen>
+      <avoidBareLeftParen>false</avoidBareLeftParen>
       <beforeOperator>true</beforeOperator>
       <concatOnlyWhenBothLiteral>true</concatOnlyWhenBothLiteral>
       <disable>
        <complexExpr>false</complexExpr>
       </disable>
       <enable>true</enable>
-      <keepLinebreak>true</keepLinebreak>
+      <keepLinebreak>false</keepLinebreak>
       <keepLinebreakArray>false</keepLinebreakArray>
       <keepLinebreakCallArgs>true</keepLinebreakCallArgs>
-      <keepLinebreakConcat>false</keepLinebreakConcat>
+      <keepLinebreakConcat>true</keepLinebreakConcat>
       <keepLinebreakDeclParams>false</keepLinebreakDeclParams>
-      <keepLinebreakDot>true</keepLinebreakDot>
+      <keepLinebreakDot>false</keepLinebreakDot>
+      <keepLinebreakEnumConstasnt>true</keepLinebreakEnumConstasnt>
       <keepLinebreakTernary>false</keepLinebreakTernary>
       <lineLength>120</lineLength>
       <strictlyObeyKeepLinebreak>true</strictlyObeyKeepLinebreak>
@@ -982,35 +992,36 @@
      <implements>whenNecessary</implements>
      <implementsTypes>whenNecessary</implementsTypes>
      <import>never</import>
-     <label>always</label>
+     <label>whenNecessary</label>
      <lambda>whenExceed</lambda>
      <markerAnnotation>always</markerAnnotation>
      <methodName>never</methodName>
      <multiVar>
       <declarator>never</declarator>
-      <type>never</type>
+      <type>whenNecessary</type>
      </multiVar>
      <nestedCallArgument>whenNecessary</nestedCallArgument>
-     <nestedChainedCall>allWhenExceed</nestedChainedCall>
+     <nestedChainedCall>whenNecessary</nestedChainedCall>
      <ondemand>
       <after>
        <parameter>false</parameter>
       </after>
-      <argsLower>true</argsLower>
+      <argsLower>false</argsLower>
       <stringLiteral>false</stringLiteral>
      </ondemand>
      <operator>whenNecessary</operator>
      <operatorIndex>whenNecessary</operatorIndex>
      <parameter>allWhenExceed</parameter>
-     <parameterMarkerAnnotation>whenNecessary</parameterMarkerAnnotation>
+     <parameterAnnotation>whenExceed</parameterAnnotation>
+     <parameterMarkerAnnotation>never</parameterMarkerAnnotation>
      <parenGrouping>whenNecessary</parenGrouping>
      <parenLeft>whenNecessary</parenLeft>
      <parenRight>whenNecessary</parenRight>
      <preferLowerLevel>
-      <methodCallAssignments>true</methodCallAssignments>
+      <methodCallAssignments>false</methodCallAssignments>
      </preferLowerLevel>
      <qualifier>whenNecessary</qualifier>
-     <registryAssign>never</registryAssign>
+     <registryAssign>whenNecessary</registryAssign>
      <return>whenNecessary</return>
      <ternaryColon>whenNecessary</ternaryColon>
      <ternaryQuestion>whenNecessary</ternaryQuestion>
@@ -1029,9 +1040,9 @@
     <level>0</level>
    </backup>
    <convention>
-    <description>Hubrick Java Style</description>
+    <description>Sun Java Coding Convention</description>
     <local/>
-    <name>Hubrick</name>
+    <name>Sun</name>
    </convention>
    <exclusions/>
    <fileTypes><![CDATA[java
@@ -1041,7 +1052,7 @@
 ]]></fileTypes>
    <history>
     <location/>
-    <method>NONE</method>
+    <method>CRC32</method>
    </history>
    <locale>
     <country>US</country>
@@ -1055,21 +1066,21 @@
     <forceEncoding>true</forceEncoding>
     <forceFormatting>false</forceFormatting>
     <forceLineSeparator>false</forceLineSeparator>
-    <formatOnCheckin>false</formatOnCheckin>
-    <formatOnGeneration>false</formatOnGeneration>
+    <formatOnCheckin>true</formatOnCheckin>
+    <formatOnGeneration>true</formatOnGeneration>
     <formatOnLoad>false</formatOnLoad>
     <formatOnSave>false</formatOnSave>
     <keepEditorState>false</keepEditorState>
     <lineSeparator>AUTO</lineSeparator>
     <testFormatting>false</testFormatting>
-    <threadCount>1</threadCount>
+    <threadCount>4</threadCount>
     <useEditorPreview>true</useEditorPreview>
    </misc>
    <project>
     <autoSwitch>true</autoSwitch>
    </project>
    <repository>
-    <failOnError>false</failOnError>
+    <failOnError>true</failOnError>
     <warnOnError>true</warnOnError>
    </repository>
   </shared>
