@@ -577,7 +577,7 @@
      <insertImplicitConstructor>false</insertImplicitConstructor>
      <insertLoggingConditional>false</insertLoggingConditional>
      <insertOverride>false</insertOverride>
-     <insertParameterFinal>false</insertParameterFinal>
+     <insertParameterFinal>true</insertParameterFinal>
      <insertParen>
       <return>false</return>
       <throw>false</throw>
@@ -589,7 +589,7 @@
      </insertSerialID>
      <insertTrailingNewline>true</insertTrailingNewline>
      <insertUID>false</insertUID>
-     <insertVariableFinal>false</insertVariableFinal>
+     <insertVariableFinal>true</insertVariableFinal>
      <javadocOnly>false</javadocOnly>
      <keepSameLine>
       <else>false</else>
