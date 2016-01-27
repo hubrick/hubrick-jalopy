@@ -241,9 +241,9 @@
      </initializer>
      <insert>
       <doWhile>false</doWhile>
-      <for>false</for>
-      <ifElse>false</ifElse>
-      <singleIf>false</singleIf>
+      <for>true</for>
+      <ifElse>true</ifElse>
+      <singleIf>true</singleIf>
       <singleLine>false</singleLine>
       <switch>false</switch>
       <while>false</while>
@@ -536,14 +536,14 @@
      <continuation>
       <block>true</block>
       <operator>true</operator>
-      <parameter>false</parameter>
+      <parameter>true</parameter>
       <return>true</return>
      </continuation>
-     <declParams>mixedEndline</declParams>
+     <declParams>standard</declParams>
      <dottedExpr>true</dottedExpr>
      <firstColumnComments>false</firstColumnComments>
      <general>standard</general>
-     <increaseHotSpots>true</increaseHotSpots>
+     <increaseHotSpots>false</increaseHotSpots>
      <label>false</label>
      <methodBody>true</methodBody>
      <sizes>
@@ -939,7 +939,7 @@
      <after>
       <annotationMember>whenNecessary</annotationMember>
       <leftParenthesis>
-       <annotation>never</annotation>
+       <annotation>whenExceed</annotation>
       </leftParenthesis>
      </after>
      <always>
@@ -1015,7 +1015,7 @@
      <parameterAnnotation>whenExceed</parameterAnnotation>
      <parameterMarkerAnnotation>never</parameterMarkerAnnotation>
      <parenGrouping>whenNecessary</parenGrouping>
-     <parenLeft>whenNecessary</parenLeft>
+     <parenLeft>whenExceed</parenLeft>
      <parenRight>whenNecessary</parenRight>
      <preferLowerLevel>
       <methodCallAssignments>false</methodCallAssignments>
