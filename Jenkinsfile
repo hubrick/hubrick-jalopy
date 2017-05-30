@@ -9,6 +9,7 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr:'3', daysToKeepStr:'60'))
         ansiColor('xterm')
         timestamps()
+        timeout (time: BUILD_TIMEOUT, unit: BUILD_TIMEOUT_UNIT)
     }
 
     stages {
@@ -20,13 +21,11 @@ pipeline {
             steps {
                 slackSend (channel: slackChannel(), color: '#00FF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
                 checkout scm
-                timeout (time: BUILD_TIMEOUT, unit: BUILD_TIMEOUT_UNIT) {
-                    script {
-                        gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-                        withDockerRegistry([credentialsId: 'docker-registry-net-secret', url: 'https://docker.hubrick.net']) {
-                            withMaven(maven: MAVEN_TOOL_VERSION, mavenSettingsConfig: 'maven-clean-settings-xml') {
-                                sh "mvn -U clean package"
-                            }
+                script {
+                    gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+                    withDockerRegistry([credentialsId: 'docker-registry-net-secret', url: 'https://docker.hubrick.net']) {
+                        withMaven(maven: MAVEN_TOOL_VERSION, mavenSettingsConfig: 'maven-clean-settings-xml') {
+                            sh "mvn -U clean package"
                         }
                     }
                 }
