@@ -16,7 +16,7 @@ pipeline {
 
         stage('Build') {
             agent {
-                label 'docker'
+                label 'docker-ng'
             }
             steps {
                 slackSend (channel: slackChannel(), color: '#00FF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
